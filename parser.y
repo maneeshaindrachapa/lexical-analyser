@@ -17,6 +17,7 @@
 %token IF
 %token ELSE
 %token INT
+%token FLOAT
 %token RETURN
 %token VOID
 %token WHILE
@@ -48,7 +49,7 @@ program: declaration-list;
 declaration-list: declaration-list declaration | declaration;
 declaration: var-declaration | fun-declaration;
 var-declaration: type-specifier ID EOL | type-specifier ID LEFT_SQR_BRACKET NUM RIGHT_SQR_BRACKET EOL;
-type-specifier: INT | VOID;
+type-specifier: INT | FLOAT | VOID;
 fun-declaration: type-specifier ID LEFT_BRACKET params RIGHT_BRACKET compound-stmt;
 params: param-list | VOID;
 param-list: param-list COMMA param | param;
