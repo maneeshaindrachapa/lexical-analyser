@@ -31,42 +31,42 @@ Simple lexical analyser and syntax parser made using Cygwin
  
 9. param-> type-specifier ID   | type-specifier ID [ ] 
  
-10.compound-stmt-> { local-declarations statement-list } 
+10. compound-stmt-> { local-declarations statement-list } 
  
-11.local-declarations-> local-declarations var-declaration   | empty 
+11. local-declarations-> local-declarations var-declaration   | empty 
  
-12.statement-list-> statement-list statement  | empty 
+12. statement-list-> statement-list statement  | empty 
  
-13.statement-> expression-stmt | compound-stmt | selection-stmt | iteration-stmt |         return-stmt 
+13. statement-> expression-stmt | compound-stmt | selection-stmt | iteration-stmt |         return-stmt 
  
-14.expression-stmt-> expression ;  | ; 
+14. expression-stmt-> expression ;  | ; 
  
-15.selection-stmt-> if( expression ) statement | if( expression ) statement else           statement 
+15. selection-stmt-> if( expression ) statement | if( expression ) statement else           statement 
  
-16.iteration-stmt-> while ( expression ) statement 
+16. iteration-stmt-> while ( expression ) statement 
  
-17.return-stmt-> return ;  | return expression ; 
+17. return-stmt-> return ;  | return expression ; 
  
-18.expression-> var = expression  | simple-expression 
+18. expression-> var = expression  | simple-expression 
  
-19.var-> ID    | ID [ expression ] 
+19. var-> ID    | ID [ expression ] 
  
-20.simple-expression -> additive-expression relop additive-expression|     additive-expression 
+20. simple-expression -> additive-expression relop additive-expression|     additive-expression 
  
-21.relop->  < | <=        | >       | >=       | ==      | != 
+21. relop->  < | <=        | >       | >=       | ==      | != 
  
-22.additive-expression-> additive-expression addop term   | term 
+22. additive-expression-> additive-expression addop term   | term 
  
-23.addop-> +      | - 
+23. addop-> +      | - 
  
-24.term-> term mulop factor      | factor 
+24. term-> term mulop factor      | factor 
  
-25.mulop-> * | / 
+25. mulop-> * | / 
  
-26.factor-> ( expression )       | var       | call       | NUM 
+26. factor-> ( expression )       | var       | call       | NUM 
  
-27.call-> ID ( args )  
+27. call-> ID ( args )  
  
-28.args-> arg-list     | empty 
+28. args-> arg-list     | empty 
  
-29.arg-list-> arg-list , expression | expression 
+29. arg-list-> arg-list , expression | expression 
