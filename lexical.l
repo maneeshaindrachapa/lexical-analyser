@@ -27,6 +27,7 @@
 "if"                        return IF;
 "else"                      return ELSE;
 "int"                       return INT;
+"float"                       return FLOAT;
 "return"                    return RETURN;
 "void"                      return VOID;
 "while"                     return WHILE;
