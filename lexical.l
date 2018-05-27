@@ -1,7 +1,7 @@
 %x IN_COMMENT 
 
 %{
-    #include "parser.tab.h"
+    #include "parser_.tab.h"
     extern int line_number;
 
     void yyerror(char const *s) {
@@ -27,7 +27,7 @@
 "if"                        return IF;
 "else"                      return ELSE;
 "int"                       return INT;
-"float"                       return FLOAT;
+"float"                     return FLOAT;
 "return"                    return RETURN;
 "void"                      return VOID;
 "while"                     return WHILE;
@@ -54,7 +54,6 @@
 [0-9][0-9]*                 return NUM;
 [ \t\r]+                    ;
 [\n]                        {line_number++;}
-[a-zA-Z0-9]+                yyerror("Identifier must consist only alphabetical characters!");
-[*][/]                      yyerror("not initialized comment!");
-.                           yyerror("Error in Syntax!");
-
+[a-zA-Z0-9]+                yyerror("Identifier only contain alphabetical characters!");
+[*][/]                      yyerror("Error with initioaloze the comment!");
+.                           yyerror("Syntax Error!");
